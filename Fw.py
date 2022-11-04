@@ -1,3 +1,6 @@
+from cmath import exp
+
+
 Cw = 5
 def calc_luchtweerstand(v, Cw, A, T, F): #per meter
     # p = airdensity, M = molaire massa lucht, R = gasconstante
