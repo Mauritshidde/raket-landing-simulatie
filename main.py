@@ -1,8 +1,9 @@
 from Fw import *
 
+
 def main():
-    notLanded = True
-    while notLanded:
+    height = 10000  # km
+    while height > 0:
         F = 40
         Tb = 27 + 273
         speed = 100
@@ -10,5 +11,6 @@ def main():
         Fw = calc_luchtweerstand(speed, Cw, A, Tb, F)
         F = Fw
         print(Fw)
+
 
 main()
