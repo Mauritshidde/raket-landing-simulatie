@@ -1,15 +1,22 @@
-Cw = 5
-def calc_luchtweerstand(v, Cw, A, T, F): #per meter
+import math
+
+def calc_luchtweerstand(velocity, Cw, area, temperatuur, force): #per meter
     # p = airdensity, M = molaire massa lucht, R = gasconstante
-    Tper_m = 9.8 / 1000
-    
-    T = T - Tper_m
-    G = 6.67384 * 10^-11
-    M = 28.97 # constant
-    R = 8.314472 # constant
-    p = p * exp(-M*G*H/(R*T))
-    Rho = (p * M) / (R * T)
-    k = 0.5 * Cw * A * Rho
+    # Tper_m = 9.8 / 1000
+    pressure = 1
+    # T = T - Tper_m
+    GRAVITATIE_CONSTANT = 6.67384 * pow(10, -11)
+    MOLAIRE_MASSA = 28.97 # constant
+    R_GASCONSTANTE = 8.314472 # constant
+    pressure = pressure * exp(-MOLAIRE_MASSA * GRAVITATIE_CONSTANT * hoogte /(R_GASCONSTANTE * temperatuur))
+    Rho = (pressure * MOLAIRE_MASSA) / (R_GASCONSTANTE * temperatuur)
+    k = 0.5 * Cw * area * Rho
     Fw = k * v * v
 
     return Fw
+
+for i in range(100):
+    v = 100
+    F = 10000
+    a = 10
+    calc_luchtweerstand()
