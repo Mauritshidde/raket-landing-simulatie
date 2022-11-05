@@ -1,3 +1,6 @@
+# Deze code werkt niet!!!
+# zie /version2 voor werkende code (in ander folder i.v.m. merge conflicts)
+
 from Fw import *
 from plot import *
 
