@@ -7,6 +7,8 @@ def calc_grafitatiekracht(height, MASS_ROCKET):
     MASS_EARTH = 5.972 * pow(10, 24)  # kg
 
     FORCE_GRAFITATIE = GRAFITATIONAL_CONSTANT * \
-        (MASS_EARTH * MASS_ROCKET) / (RADIUS_EARTH + height)
+        MASS_EARTH * MASS_ROCKET / pow(RADIUS_EARTH + height, 2) # N
 
     return FORCE_GRAFITATIE
+
+print(calc_grafitatiekracht(100, 100))
