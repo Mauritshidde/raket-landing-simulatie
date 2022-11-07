@@ -7,6 +7,6 @@ def calc_gravitationforce(height, MASS_ROCKET):
     MASS_EARTH = 5.972 * pow(10, 24)  # kg
 
     FORCE_GRAVITATION = GRAVITATIONAL_CONSTANT * \
-        MASS_EARTH * MASS_ROCKET / pow(RADIUS_EARTH + height, 2) # N
+        MASS_EARTH * MASS_ROCKET / pow(RADIUS_EARTH + height, 2)  # N
 
     return FORCE_GRAVITATION
