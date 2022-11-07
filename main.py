@@ -20,6 +20,7 @@ def main():
             height, mass_rocket)  # Nm^2/kg^2
         force_resistance = calc_airresistance(
             height, TEMPERATURE, area, velocity)
+        force_netto = force_resistance + force_thrust - force_gravitation
 
         print()
         print("--- iteration ", i, " ---")
