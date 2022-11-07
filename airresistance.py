@@ -6,7 +6,7 @@ def calc_airresistance(height, temperature, area, velocity):
     GAS_CONSTANT = 8.314472  # j/K/mol
     MOLAIR_MASS = 28.97  # g/mol
     PRESSURE_ZERO = 1013  # hPa
-    Cw = 10
+    Cw = 0.82
 
     pressure_exponent = -MOLAIR_MASS * GRAVITATIONAL_CONSTANT * \
         height / (GAS_CONSTANT * temperature)
