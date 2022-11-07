@@ -9,6 +9,7 @@ def main():
     dt = 1  # s
     iterations = 10  # times
     height = 30000  # m
+    BURN_RATE = 1529.63 # kg / s
     accelaration = 0  # m/s/s
     velocity = 0  # m/s
     mass_rocket = 549054  # kg (mass falcon 9)
