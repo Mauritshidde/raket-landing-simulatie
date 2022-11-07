@@ -22,6 +22,7 @@ def main():
             height, TEMPERATURE, area, velocity)
         force_netto = force_resistance + force_thrust - force_gravitation
         velocity += force_netto / mass_rocket * dt
+        height += velocity * dt
 
         print()
         print("--- iteration ", i, " ---")
