@@ -1,7 +1,7 @@
 from math import pi
 from gravitation import calc_gravitationforce
 from airresistance import calc_airresistance
-
+from plot import *
 
 def main():
     t = 0  # s
@@ -29,6 +29,6 @@ def main():
         print('graviatation:', force_gravitation)
         print('resistance:', force_resistance)
         print()
-
+    
 
 main()
