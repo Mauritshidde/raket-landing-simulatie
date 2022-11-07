@@ -11,8 +11,7 @@ def main():
     accelaration = 0  # m/s/s
     velocity = 0  # m/s
     mass_rocket = 549054  # kg (mass falcon 9)
-    force_thrust = 8227000  # N (thrust falcon 9 in vacuum)
-    force_netto = 0  # N
+    force_thrust = 7607000  # N (thrust falcon 9 in vacuum)
     TEMPERATURE = 298  # K
     area = 2 * pi * 3.7  # m^2
     for i in range(iterations):
