@@ -8,8 +8,7 @@ def main():
     dt = 1  # s
     iterations = 10  # times
     height = 30000  # m
-    BURN_RATE = 1529.63 # kg / s
-    accelaration = 0  # m/s/s
+    BURN_RATE = 1529.63  # kg / s
     velocity = 0  # m/s
     mass_rocket = 549054  # kg (mass falcon 9)
     force_thrust = 7607000  # N (thrust falcon 9 in vacuum)
@@ -22,6 +21,7 @@ def main():
         force_resistance = calc_airresistance(
             height, TEMPERATURE, area, velocity)
         force_netto = force_resistance + force_thrust - force_gravitation
+        velocity += force_netto / mass_rocket * dt
 
         print()
         print("--- iteration ", i, " ---")
