@@ -29,7 +29,7 @@ def main():
         if (height < target_height):
             force_gravitation = calc_gravitationforce(
                 height, mass_rocket)  # Nm^2/kg^2
-            force_resistance = calc_airresistance(
+            force_resistance, aird = calc_airresistance(
                 height, TEMPERATURE, area, velocity)
             
             if (velocity >= 0):
@@ -47,7 +47,9 @@ def main():
         else:
             pass
 
-            
+        if (height >= 40000):
+            print(height, force_resistance, aird)
+            break
             
         energie_list.append(totale_verbruikte_energie)
         kracht_list.append(force_resistance) 
@@ -61,8 +63,8 @@ def main():
         # print('resistance:', force_resistance)
         # print(height)
 
-    all_y_list = [energie_list, kracht_list, snelheid_list, height_list]
-    all_x_list = [tijd_list, tijd_list, tijd_list, tijd_list]
+    all_y_list = [kracht_list, kracht_list, snelheid_list, height_list]
+    all_x_list = [height_list, tijd_list, tijd_list, tijd_list]
 
     plot_values(["energie in Joule", "kracht in Newton", "snelheid in m/s"], ["tijd in s", "tijd in s", "tijd in s"], all_x_list, all_y_list)
     

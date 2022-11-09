@@ -19,4 +19,4 @@ def calc_airresistance(height, temperature, area, velocity):
     print(pressure_exponent)
     k = 0.5 * Cw * area * density
     force_airresistance = k * pow(velocity, 2)
-    return force_airresistance
+    return force_airresistance, density
