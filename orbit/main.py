@@ -14,15 +14,25 @@ def main():
     force_thrust = 7607000  # N (thrust falcon 9 in vacuum)
     TEMPERATURE = 298  # K
     area = 2 * pi * 3.7  # m^2
+    R_aarde = 6.371 * pow(10, 6) # m
+    max_hoogte = 200000 # m
+    omtrek_baan = 2 * pi * (R_aarde + max_hoogte) # m^2
+    afstand_afteleggen = omtrek_baan/2
+    afstand_afgelegd = 0
     for i in range(iterations):
         t += dt
-        force_gravitation = calc_gravitationforce(
-            height, mass_rocket)  # Nm^2/kg^2
-        force_resistance = calc_airresistance(
-            height, TEMPERATURE, area, velocity)
-        force_netto = force_resistance + force_thrust - force_gravitation
-        velocity += force_netto / mass_rocket * dt
-        height += velocity * dt
+        if (afstand_afgelegd < afstand_afteleggen):
+            # force_gravitation = calc_gravitationforce(
+            #     height, mass_rocket)  # Nm^2/kg^2
+            # force_resistance = calc_airresistance(
+            #     height, TEMPERATURE, area, velocity)
+            # force_netto = force_resistance + force_thrust - force_gravitation
+            # velocity += force_netto / mass_rocket * dt
+            # height += velocity * dt
+            afstand_afgelegd += velocity * dt
+        else:
+            pass
+                
 
         print()
         print("--- iteration ", i, " ---")
