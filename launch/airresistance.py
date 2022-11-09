@@ -14,7 +14,7 @@ def calc_airresistance(height, temperature, area, velocity):
 
     pressure_exponent = -MOLAIR_MASS * fall_acceleration * \
         height / (GAS_CONSTANT * temperature)
-    pressure = PRESSURE_ZERO * exp(pressure_exponent)  # hPa
+    pressure = (PRESSURE_ZERO * exp(pressure_exponent))*100  # Pa
     density = (pressure * MOLAIR_MASS) / (GAS_CONSTANT * temperature)  # kg/m^3
     print(pressure_exponent)
     k = 0.5 * Cw * area * density
