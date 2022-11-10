@@ -10,7 +10,6 @@ def main():
     velocities = []
     t = 0  # s
     dt = 1  # s
-    iterations = 20000  # times
     height = 100000  # m
     BURN_RATE = 1529.63  # kg / s
     velocity = 0  # m/s
@@ -23,14 +22,7 @@ def main():
     Cw = 0.82
     Cw_parachute = 1.5
 
-    for i in range(iterations):
-        if height <= 0:
-            print(velocity)
-            break
-
-        if velocity >= 0:
-            velocity = 0
-        
+    while height >= 0: 
         t += dt
         if height <= 10000:
             area = 2 * pi * RADIUS_PARACHUTE
@@ -41,6 +33,8 @@ def main():
             height, TEMPERATURE, area, velocity, Cw)
         force_netto = force_resistance - force_gravitation
         velocity += force_netto / mass_rocket * dt
+        if velocity >= 0: # correct inaccuracy
+            velocity = 0
         height += velocity * dt
         heights.append(height)
         times.append(t)
