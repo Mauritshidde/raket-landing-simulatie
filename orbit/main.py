@@ -47,6 +47,7 @@ def main():
             # velocity += force_netto / mass_rocket * dt
             # height += velocity * dt
             afstand_afgelegd += velocity * dt
+            Time = (omtrek_baan/velocity)/2
         else:
             print("ja")
             pass
