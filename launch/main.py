@@ -11,9 +11,9 @@ def main():
     height_list = []
 
     t = 0  # s
-    dt = 0.1  # s
+    dt = 0.01  # s
     Rv = 42.8 * pow(10, 6) # Kerosine in J/kg
-    iterations = 10000  # times
+    iterations = 1000000  # times
     height = 0  # m
     BURN_RATE = 1529.63  # kg / s
     velocity = 0  # m/s
@@ -46,11 +46,15 @@ def main():
             
                 # force_resistance = 0
             if height >= 100000:
-                second_stage_fuel_mass -= BURN_RATE * dt
+                if (second_stage_fuel_mass < BURN_RATE * dt):
+                    force_thrust = 0
+                else:
+                    second_stage_fuel_mass -= BURN_RATE * dt
+                
+                print(second_stage_fuel_mass)
                 # print()
             else:
                 mass_fuel_rocket -= BURN_RATE * dt
-                print(mass_fuel_rocket)
 
             if (velocity >= 0):
                 force_netto = force_thrust - force_gravitation - force_resistance
@@ -65,6 +69,8 @@ def main():
             totale_verbruikte_energie += chemische_energie
 
         else:
+            print(t)
+            break
             pass
 
         # if (height >= 40000):
