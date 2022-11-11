@@ -27,8 +27,8 @@ def main():
     force_netto = 0 # N
     totale_verbruikte_energie = 0
     target_height = 200000 # m
-    second_stage_fuel_mass = 3900 # kg
-    second_stage_vehicle_mass = 92670 # kg
+    second_stage_fuel_mass = 92670 # kg
+    second_stage_vehicle_mass = 3900 # kg
     for i in range(iterations):
         t += dt
         if (height < target_height):
@@ -49,9 +49,10 @@ def main():
                 if (second_stage_fuel_mass < BURN_RATE * dt):
                     force_thrust = 0
                 else:
+                    # print(mass_fuel_rocket)
                     second_stage_fuel_mass -= BURN_RATE * dt
                 
-                print(second_stage_fuel_mass)
+                print(second_stage_fuel_mass, mass_fuel_rocket)
                 # print()
             else:
                 mass_fuel_rocket -= BURN_RATE * dt
@@ -77,8 +78,8 @@ def main():
         #     print(height, force_resistance, aird)
         #     break
             
-        energie_list.append(force_gravitation)
-        kracht_list.append(force_netto) 
+        energie_list.append(mass_rocket)
+        kracht_list.append(force_resistance) 
         tijd_list.append(t) 
         height_list.append(height)
         snelheid_list.append(velocity)
