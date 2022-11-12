@@ -1,4 +1,4 @@
-from math import pi
+from math import pi, pow
 from gravitation import calc_gravitationforce
 from airresistance import calc_airresistance
 from plot import *
@@ -19,14 +19,14 @@ def main():
     TEMPERATURE = 298  # K
     RADIUS_ROCKET = 3.7  # m
     RADIUS_PARACHUTE = 60  # m
-    area = 2 * pi * RADIUS_ROCKET  # m^2
+    area = pi * pow(RADIUS_ROCKET, 2)  # m^2
     Cw = 0.82
     Cw_parachute = 1.5
 
     while height >= 0:
         t += dt
         if height <= 5000:
-            area = 2 * pi * RADIUS_PARACHUTE
+            area = pi * pow(RADIUS_PARACHUTE, 2)
             Cw = Cw_parachute
         force_gravitation = calc_gravitationforce(
             height, mass_rocket)  # Nm^2/kg^2

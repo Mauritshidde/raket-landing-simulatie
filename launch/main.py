@@ -23,7 +23,7 @@ def main():
     mass_rocket = 549054  # kg (mass falcon 9)
     force_thrust = 7607000  # N (thrust falcon 9 in vacuum)
     TEMPERATURE = 298  # K
-    area = 2 * pi * 3.7  # m^2
+    area = pi * pow(3.7, 2)  # m^2
     force_netto = 0 # N
     totale_verbruikte_energie = 0
     target_height = 200000 # m
@@ -70,7 +70,7 @@ def main():
             totale_verbruikte_energie += chemische_energie
 
         else:
-            print(t)
+            print(velocity)
             break
             pass
 
