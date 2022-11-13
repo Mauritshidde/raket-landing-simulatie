@@ -166,6 +166,7 @@ Wij hebben met onze simulatie een idee gekregen van hoeveel tijd het zou kosten 
 |Halve baan|4042 seconden (1 uur en 7 minuten)|
 |Landen|1518 seconden (25 minuten)|
 |Totaal|5788 seconden (1 uur, 36 minuten en 28 seconden)|
+
 Het is dus mogelijk om met een raket aan de andere kant van de wereld te komen in iets meer dan anderhalf uur. Volgens <https://www.distance.to/> duurt een vergelijkbare vliegreis van Amsterdam naar Wellington (Nieuw-Zeeland) van rond de 19.000km over land en zee ongeveer 22 uur en 20 minuten. Je bent dus met een raket 14 keer sneller op je eindbestemming dan met het vliegtuig. Dus als geld en klimaatopwarming geen rol speelt, maakt een raketreis een enorm verschil in reistijd voor een reis naar de andere kant van de wereld.
 
 We hebben onze simulaties gemaakt in de programmeertaal *Python.* Je kunt onze code die we hebben gemaakt voor deze al onze simulaties bekijken op: <https://github.com/Mauritshidde/raket-landing-simulatie> 
