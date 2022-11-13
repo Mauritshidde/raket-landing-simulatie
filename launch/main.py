@@ -70,7 +70,7 @@ def main():
             totale_verbruikte_energie += chemische_energie
 
         else:
-            print(velocity)
+            print(t)
             break
             pass
 

@@ -10,15 +10,15 @@ def main():
     force = []
     velocities = []
     t = 0  # s
-    dt = 1  # s
-    height = 100000  # m
+    dt = 0.0001  # s
+    height = 200000  # m
     BURN_RATE = 1529.63  # kg / s
     velocity = 0  # m/s
     mass_rocket = 3000  # kg (mass falcon 9)
     # force_thrust = 7607000  # N (thrust falcon 9 in vacuum)
     TEMPERATURE = 298  # K
     RADIUS_ROCKET = 3.7  # m
-    RADIUS_PARACHUTE = 60  # m
+    RADIUS_PARACHUTE = 25  # m
     area = pi * pow(RADIUS_ROCKET, 2)  # m^2
     Cw = 0.82
     Cw_parachute = 1.5
@@ -39,12 +39,12 @@ def main():
         height += velocity * dt
         heights.append(height)
         times.append(t)
-        force.append(force_resistance)
-        velocities.append(velocity)
+        force.append(force_gravitation)
+        velocities.append(-velocity)
     else:
-        print(velocity)
+        print("t",t, "v", velocity)
 
-    # plot_values("time", "height", times, heights)
+    plot_values("Snelheid met parachute", "tijd(s)", "Snelheid (m/s)", times, velocities)
 
 
 main()

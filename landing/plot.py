@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def plot_values(xlabel, ylabel, xvalues, yvalues):
+def plot_values(title, xlabel, ylabel, xvalues, yvalues):
+    
     xpoints = np.array(xvalues)
     ypoints = np.array(yvalues)
 
@@ -10,5 +11,5 @@ def plot_values(xlabel, ylabel, xvalues, yvalues):
 
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
-
+    plt.title(title)
     plt.show()
