@@ -74,8 +74,6 @@ p0 wordt vermenigvuldigd met 100, omdat de eenheid hPa is en we Pa nodig hebben.
 |Burn\_rate|Burn\_rate\_first kg/s|Het aantal brandstof dat er per seconde wordt verbruikt|
 |<h3>Mhuidige\_brandstof\_tank</h3>|Mfirststage\_brandstof kg|De brandstof tank die wordt gebruikt voor het produceren van de stuwkracht van de raket|
 |Mraket|Mfirststage\_brandstof + Mfirststage + Msecondstage\_brandstof + Msecondstage + Mcapsule kg|De massa van de raket aan het begin is gelijk aan de massa van allen raket onderdelen|
-
-
 |<h3>**Als dan**</h3>|<h3>**Action**</h3>|<h3>**Eenheid**</h3>|<h3>**omschrijving**</h3>|
 |<h3>h >= 100.000 m</h3>|Mraket = Msecondstage + Msecondstage\_drandstof + Mcapsule|<h3>kg</h3>|<h3>Bij 100 km hoogte wordt de first stage weggedaan waardoor de massa van de raket die onderdelen niet meer meeneemt</h3>|
 |h >= 100.000 m |<h3>Fstuw  = Fstuw\_secondstage</h3>|<h3>N</h3>|<h3>Bij 100 km wordt de first stage weggedaan en wordt de second stage motor aan gedaan en die heeft een andere stuwkracht</h3>|
